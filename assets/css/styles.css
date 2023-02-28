@@ -16,14 +16,14 @@
 }
 
 @font-face {
-	font-family: "Midorima";
-	src: url("../fonts/midorima_medium.ttf");
+	font-family: "Fujimaru";
+	src: url("../fonts/fujimaru_regular.ttf");
 }
 
 :root {
 	--clr-text: hsl(200, 19%, 85%));
 	--default-font: "IBM-plex-sans", sans-serif;
-	--font-jp: "Midorima"
+	--font-jp: "Fujimaru"
 }
 
 html {
@@ -175,7 +175,7 @@ body {
 	margin-top: 16px;
 	font-family: var(--font-jp);
 	font-size: 48px;
-	letter-spacing: 8px;
+	letter-spacing: 2px;
 	text-align: center;
 }
 
