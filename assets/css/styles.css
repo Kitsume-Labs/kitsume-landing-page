@@ -16,14 +16,14 @@
 }
 
 @font-face {
-	font-family: "Fujimaru";
-	src: url("../fonts/fujimaru_regular.ttf");
+	font-family: "Midorima";
+	src: url("../fonts/midorima_medium.ttf");
 }
 
 :root {
 	--clr-text: hsl(200, 19%, 85%));
 	--default-font: "IBM-plex-sans", sans-serif;
-	--font-jp: "Fujimaru"
+	--font-jp: "Midorima"
 }
 
 html {
@@ -42,6 +42,29 @@ body {
 	min-height: 100vh;
 	padding: 16px;
 	overflow-x: hidden;
+}
+
+.cover {
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color:hsl(0, 0%, 0%);
+	z-index: 99;
+	opacity: 1.0;
+	pointer-events: all;
+	transition: 500ms ease-out;
+	-webkit-transition: 500ms ease-out;
+	-moz-transition: 500ms ease-out;
+	-ms-transition: 500ms ease-out;
+	-o-transition: 500ms ease-out;
+}
+
+.cover.hidden {
+	opacity: 0.0;
+	pointer-events: none;
 }
 
 .container {
@@ -188,6 +211,7 @@ body {
 	margin-top: 8px;
 	cursor: default;
 	transition: 500ms ease;
+	position: relative;
 }
 
 .container p.underline {
@@ -212,6 +236,32 @@ body {
 .container p.underline:hover > a {
 	opacity: 1.0;
 	color: hsl(240, 100%, 99%)
+}
+
+.container p.underline > a i {
+	position: absolute;
+	top: -2px;
+	right: -6px;
+	width: 10px;
+	transition: 100ms linear;
+	-webkit-transition: 100ms linear;
+	-moz-transition: 100ms linear;
+	-ms-transition: 100ms linear;
+	-o-transition: 100ms linear;
+}
+
+.container p.underline > a i svg {
+	max-width: 16px;
+	stroke: hsl(240, 12%, 73%);
+}
+
+.container p.underline:hover > a i {
+	right: -8px;
+	top: -4px;
+}
+
+.container p.underline:hover > a i svg {
+	stroke: hsl(240, 100%, 98%);
 }
 
 .container p.underline:hover::before {
